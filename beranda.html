@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<style>
+  body {
+    margin: 0;
+  }
+
+  .bg-gambar {
+    min-height: 480px;
+    background: url('https://cdn.pixabay.com/photo/2018/10/28/09/56/mountains-3778244_1280.jpg') center/cover no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 110px;
+    padding-bottom: 60px;
+    position: relative;
+    animation: fadeIn 1.2s;
+  }
+
+  .pemesanan {
+    display: flex;
+    justify-content: center;
+    margin-top: -48px;
+    margin-bottom: 32px;
+    z-index: 10;
+    position: relative;
+  }
+
+  .pemesanan-box {
+    background: #fff;
+    padding: 28px 24px 20px 24px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,87,255,0.13);
+    display: inline-block;
+    margin-top: 10px;
+    color: #222;
+    min-width: 320px;
+    animation: fadeIn 1.7s;
+  }
+
+  .pemesanan-box button {
+    background: linear-gradient(90deg, #0057ff 60%, #00c3ff 100%);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,87,255,0.10);
+  }
+  .pemesanan-box button:hover {
+    background: #003fa3;
+    transform: translateY(-2px) scale(1.04);
+  }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg container">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<section class="bg-gambar">
+  <h1>Pesan Tiket Bus Mudah & Nyaman</h1>
+  <p>Temukan tiket bus terbaik, promo menarik, dan destinasi favorit untuk perjalanan Anda!</p>
+</section>
+<div class="pemesanan">
+    <form class="pemesanan-box">
+      <input type="text" placeholder="Kota Keberangkatan" required>
+      <input type="text" placeholder="Kota Tujuan" required>
+      <input type="date" required>
+      <select required>
+        <option value="">Penumpang</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4+</option>
+      </select>
+      <button type="submit"><i class="fa fa-search"></i> Cari Tiket Bus</button>
+    </form>
+  </div>
+</body>
+</html>
