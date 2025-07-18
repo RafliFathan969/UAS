@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak | BusTiket.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="beranda.html">
+      <img src="https://i.pinimg.com/1200x/7e/f2/4d/7ef24db3928b30fd17586d85d5c1e912.jpg" alt="Logo" width="40" height="34" class="d-inline-block align-text-top">
+      BusTiket.com
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="beranda.html">Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cekpemesanan.html">Cek Pemesanan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="kontak.html">Kontak</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow mb-5">
+        <div class="card-body">
+          <h3 class="card-title mb-4 text-center">Kontak Kami</h3>
+          <form id="formKontak">
+            <div class="mb-3">
+              <label for="nama" class="form-label">Nama</label>
+              <input type="text" class="form-control" id="nama" name="nama" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="pesan" class="form-label">Pesan</label>
+              <textarea class="form-control" id="pesan" name="pesan" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+          </form>
+          <div id="hasilPesan" class="alert alert-success mt-4 d-none"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Informasi Kontak</h5>
+          <ul class="list-unstyled mb-0">
+            <li><strong>Email:</strong> info@bustiket.com</li>
+            <li><strong>Telepon:</strong> 021-12345678</li>
+            <li><strong>Alamat:</strong> Kp.Jeulingke, Kec.Syiah Kuala, Kab.Banda Aceh</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    2025 BusTiket.com
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.getElementById('formKontak').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var nama = document.getElementById('nama').value;
+    var email = document.getElementById('email').value;
+    var pesan = document.getElementById('pesan').value;
+    var hasilPesan = document.getElementById('hasilPesan');
+    hasilPesan.classList.remove('d-none');
+    hasilPesan.innerHTML = `<strong>Pesan Terkirim!</strong><br>Nama: ${nama}<br>Email: ${email}<br>Pesan: ${pesan}`;
+    document.getElementById('formKontak').reset();
+});
+</script>
+</body>
+</html>

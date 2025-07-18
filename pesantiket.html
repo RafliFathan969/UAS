@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+    footer {
+        background: #222;
+        color: #fff;
+        text-align: center;
+        padding: 28px 0 18px 0;
+        margin-top: 60px;
+        font-size: 1rem;
+        position: relative;
+    }
+</style>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="beranda.html">
+      <img src="https://i.pinimg.com/1200x/7e/f2/4d/7ef24db3928b30fd17586d85d5c1e912.jpg" alt="Logo" width="40" height="34" class="d-inline-block align-text-top">
+      BusTiket.com
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="beranda.html">Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cekpemesanan.html">Cek Pemesanan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="kontak.html">Kontak</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="d-flex justify-content-center" style="height: 100vh;">
+        <div id="formtiket" class="card" style="width: 34rem; ">
+            <div class="card-body">
+            <h4 class="card-title d-flex justify-content-center">Pemesanan Tiket</h4><br>
+            <form>
+            <div class="mb-3">
+                <label for="asal" class="form-label">Kota Asal</label>
+                <input type="text" class="form-control" id="asal" name="asal" required>
+            </div>
+            <div class="mb-3">
+                <label for="tujuan" class="form-label">Kota Tujuan</label>
+                <input type="text" class="form-control" id="tujuan" name="tujuan" required>
+            </div>
+            <div class="mb-3">
+                <label for="tanggal" class="form-label">Tanggal Keberangkatan</label>
+                <input type="date" class="form-control" id="tanggal" name="tanggal" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Jumlah Penumpang</label>
+                <div class="btn-group" role="group" aria-label="Pilihan Penumpang">
+                    <label class="btn" for="penumpang1">
+                        <input type="radio" name="penumpang" id="penumpang1" value="1" autocomplete="off" required> 1 Penumpang
+                    </label>
+                    <label class="btn" for="penumpang2">
+                        <input type="radio" name="penumpang" id="penumpang2" value="2" autocomplete="off"> 2 Penumpang
+                    </label>
+                    <label class="btn" for="penumpang3">
+                        <input type="radio" name="penumpang" id="penumpang3" value="3" autocomplete="off"> 3 Penumpang
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="nama" class="form-label">Nama Pemesan</label>
+                <input type="text" class="form-control" id="nama" name="nama" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Pesan Tiket</button>
+            </form>
+        </div>
+    </div>
+    <script>
+    document.querySelector('#formtiket form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const asal = document.getElementById('asal').value;
+        const tujuan = document.getElementById('tujuan').value;
+        const tanggal = document.getElementById('tanggal').value;
+        const penumpang = document.querySelector('input[name="penumpang"]:checked')?.value || '';
+        const nama = document.getElementById('nama').value;
+        const email = document.getElementById('email').value;
+        let hasil = `Hasil Pemesanan Tiket:\n` +
+            `Kota Asal: ${asal}\n` +
+            `Kota Tujuan: ${tujuan}\n` +
+            `Tanggal Keberangkatan: ${tanggal}\n` +
+            `Jumlah Penumpang: ${penumpang}\n` +
+            `Nama Pemesan: ${nama}\n` +
+            `Email: ${email}`;
+        alert(hasil);
+    });
+    </script>
+</body>
+</html>
