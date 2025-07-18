@@ -37,15 +37,24 @@
 
   .pemesanan-box {
     background: #fff;
-    padding: 28px 24px 20px 24px;
+    padding: 50px 44px 40px 44px;
     border-radius: 18px;
-    box-shadow: 0 8px 32px rgba(0,87,255,0.13);
+    box-shadow: 0 8px 32px rgba(0, 85, 255, 0.651);
     display: inline-block;
     margin-top: 10px;
     color: #222;
     min-width: 320px;
     animation: fadeIn 1.7s;
   }
+
+  .pemesanan-box input, .pemesanan-box select, .pemesanan-box button {
+      padding: 12px 14px;
+      margin: 8px 6px;
+      border: 1px solid #cce0ff;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
 
   .pemesanan-box button {
     background: linear-gradient(90deg, #0057ff 60%, #00c3ff 100%);
@@ -60,18 +69,61 @@
     background: #003fa3;
     transform: translateY(-2px) scale(1.04);
   }
+
+  .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .pembayaran-section {
+    margin: 48px auto 0 auto;
+    text-align: center;
+    animation: fadeIn 1.7s;
+  }
+
+  .pembayaran-logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 28px 22px;
+    margin-top: 10px;
+  }
+
+  .pembayaran-logo img {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(0.2) brightness(0.98);
+    transition: filter 0.2s, transform 0.2s;
+    background: #fff;
+    border-radius: 8px;
+    padding: 4px 10px;
+    box-shadow: 0 2px 8px rgba(0,87,255,0.06);
+  }
+
+  footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 28px 0 18px 0;
+    margin-top: 60px;
+    font-size: 1rem;
+    position: relative;
+  }
 </style>
 <body>
     <nav class="navbar navbar-expand-lg container">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="https://i.pinimg.com/736x/97/07/63/970763e41f802a141dc545dddbe19ec1.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        <img src="https://i.pinimg.com/1200x/7e/f2/4d/7ef24db3928b30fd17586d85d5c1e912.jpg" alt="Logo" width="40" height="34" class="d-inline-block align-text-top">
         BusTiket.com
       </a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Cek Pemesanan</a>
+          <a class="nav-link active" aria-current="page" href="cekpemesanan.html">Cek Pemesanan</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -115,8 +167,9 @@
   </div>
 <h2 style="text-align: center; margin-bottom: auto;">Rekomendasi tiket bus</h2>
 <br>
-  <div class="container" style="display: flex; gap: 20px;">
-    <div class="card" style="width: 18rem;">
+<br>
+  <div class="container" style="display: flex; flex-wrap: wrap; gap: 20px;">
+    <div class="card" style="width: 16rem;">
       <img src="https://i.pinimg.com/1200x/69/17/d4/6917d42355d028cb087de80ddecfbec3.jpg" class="card-img-top" alt="Takengon">
       <div class="card-body">
         <h5 class="card-title">Takengon</h5>
@@ -125,15 +178,83 @@
       </div>
     </div>
 
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 16rem;">
       <img src="https://i.pinimg.com/1200x/d4/f6/0d/d4f60d1f4b4d0f46d731ca1cc23c355e.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Bireuen</h5>
+        <h5 class="card-title">Medan</h5>
         <p class="card-text"></p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="#" class="btn btn-primary">Cek Tiket</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 16rem;">
+      <img src="https://images.unsplash.com/photo-1599466610297-aaced28a8a1c?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Padang</h5>
+        <p class="card-text"></p>
+        <a href="#" class="btn btn-primary">Cek Tiket</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 16rem;">
+      <img src="https://assets.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/136/2023/08/16/Tugu-Keris-Siginjai-4083458250.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Jambi</h5>
+        <p class="card-text"></p>
+        <a href="#" class="btn btn-primary">Cek Tiket</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 16rem;">
+      <img src="https://images.unsplash.com/photo-1708900508431-1634a72cf89f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Palembang</h5>
+        <p class="card-text"></p>
+        <a href="#" class="btn btn-primary">Cek Tiket</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 16rem;">
+      <img src="https://www.krajan.id/wp-content/uploads/2024/06/file-1714966032927-Bengkulu_11zon.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Bengkulu</h5>
+        <p class="card-text"></p>
+        <a href="#" class="btn btn-primary">Cek Tiket</a>
+      </div>
+    </div>
+
+        <div class="card" style="width: 16rem;">
+      <img src="https://asset-2.tstatic.net/travel/foto/bank/images/Tugu-Perjuangan-45-Kota-Binjai-di-Sumatera-Utara.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Binjai</h5>
+        <p class="card-text"></p>
+        <a href="#" class="btn btn-primary">Cek Tiket</a>
+      </div>
+    </div>
+
+        <div class="card" style="width: 16rem;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWxVSqxD48L33sSKoOAPhC47zYdCmAfpjV4g&s" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Lhokseumawe</h5>
+        <p class="card-text"></p>
+        <a href="#" class="btn btn-primary">Cek Tiket</a>
       </div>
     </div>
   </div>
 </div>
+  <section class="pembayaran-section">
+    <h2>Metode Pembayaran</h2><br>
+    <div class="pembayaran-logo">
+      <img src="https://bankaceh.co.id/wp-content/uploads/2024/04/cropped-cropped-cropped-bank_aceh_oke-1.png" alt="BPD" title="BPD">
+      <img src="https://www.bankbsi.co.id/img/logo.png" alt="BSI" title="BSI">
+      <img src="https://gopay.co.id/assets/img/logo/gopay.webp" alt="GoPay" title="GoPay">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Logo_ovo_purple.svg/512px-Logo_ovo_purple.svg.png" alt="OVO" title="OVO">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Dana_logo.png" alt="Dana" title="Dana">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/LinkAja.svg/92px-LinkAja.svg.png" alt="ShopeePay" title="ShopeePay">
+    </div>
+  </section>
+  <footer>
+    BusTiket.com
+  </footer>
 </body>
 </html>
